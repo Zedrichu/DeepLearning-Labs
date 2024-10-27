@@ -164,6 +164,7 @@ def plot_2d_latents(ax, qz, z, y):
     ax.set_xlim([-3, 3])
     ax.set_ylim([-3, 3])
     ax.set_aspect('equal', 'box')
+    ax.legend()
 
 
 def plot_latents(ax, z, y):
@@ -172,6 +173,7 @@ def plot_latents(ax, z, y):
     colors = [palette[l] for l in y]
     z = TSNE(n_components=2).fit_transform(z)
     ax.scatter(z[:, 0], z[:, 1], color=colors)
+    ax.legend()
 
 
 def make_vae_plots(vae, x, y, outputs, training_data, validation_data, tmp_img="tmp_vae_out.png", figsize=(18, 18)):
@@ -192,7 +194,7 @@ def make_vae_plots(vae, x, y, outputs, training_data, validation_data, tmp_img="
             axes[0, 1].set_title(r'Latent Samples $\mathbf{z} \sim q_\phi(\mathbf{z} | \mathbf{x})$ (t-SNE)')
             plot_latents(axes[0, 1], z, y)
     except Exception as e:
-        print(f"Could not generate the plot of the latent sanples because of exception")
+        print(f"Could not generate the plot of the latent samples because of exception")
         print(e)
 
     # plot posterior samples
