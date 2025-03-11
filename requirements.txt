@@ -44,7 +44,7 @@ sympy==1.13.1
 torch==2.5.0.dev20240817
 torchaudio==2.4.0.dev20240817
 torchvision==0.20.0.dev20240817
-tornado==6.4.1
+tornado==6.4.2
 traitlets==5.14.3
 typing_extensions==4.12.2
 wcwidth==0.2.13
