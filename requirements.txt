@@ -41,7 +41,7 @@ setuptools==72.2.0
 six==1.16.0
 stack-data==0.6.3
 sympy==1.13.1
-torch==2.5.0.dev20240817
+torch==2.7.0
 torchaudio==2.4.0.dev20240817
 torchvision==0.20.0.dev20240817
 tornado==6.4.2
